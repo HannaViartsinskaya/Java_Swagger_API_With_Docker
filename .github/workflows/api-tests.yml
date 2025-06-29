@@ -31,7 +31,11 @@ jobs:
             selenium-java-test mvn allure:report
 
       - name: Deploy Allure report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./allure-report
+        run: |
+          cd allure-report
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update Allure Report"
+          git push --force https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
