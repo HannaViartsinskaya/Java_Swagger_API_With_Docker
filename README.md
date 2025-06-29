@@ -19,6 +19,6 @@ Run tests inside Docker:
 
 
 ### Approach
-Docker: Portable and reproducible test environment.
-Java + Selenium + Maven: Reliable stack with strong ecosystem support and integration with Allure reporting tool, also fits to your tech stack :)
+- Docker: Portable and reproducible test environment.
+- Java + Selenium + Maven: Reliable stack with strong ecosystem support and integration with Allure reporting tool, also fits to your tech stack :)
 
