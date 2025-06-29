@@ -27,4 +27,5 @@ jobs:
 
       - name: Debug Docker report folder (optional)
         run: |
-          ls -l ${{ github.workspace }}/allure-repo
+          ls -l ${{ github.workspace }}/allure-report
+
