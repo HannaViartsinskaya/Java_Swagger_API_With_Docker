@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","14849","should be able to add expenses in various ways and cancel them","","Sun Jun 29 00:10:38 CEST 2025","passed","Sun Jun 29 00:10:53 CEST 2025","","Monefy allows to add expenses in various ways and incomes; all values calculated correctly on dashboard ","",""
+"","13232","should be able to add income","","Sun Jun 29 00:10:25 CEST 2025","passed","Sun Jun 29 00:10:38 CEST 2025","","Monefy allows to add expenses in various ways and incomes; all values calculated correctly on dashboard ","",""
+"","9162","should be able to filter","","Sun Jun 29 00:10:56 CEST 2025","passed","Sun Jun 29 00:11:05 CEST 2025","","Monefy allows filter users expenses & incomes by different time ranges ","",""

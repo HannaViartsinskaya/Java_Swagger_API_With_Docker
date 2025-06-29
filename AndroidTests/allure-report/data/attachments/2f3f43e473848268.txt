@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//android.widget.FrameLayout[@resource-id='com.monefy.app.lite:id/piegraph']/android.widget.ImageView[1]"
+}
