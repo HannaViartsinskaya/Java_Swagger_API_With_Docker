@@ -33,14 +33,15 @@ jobs:
         run: |
           sudo chown -R $USER:$USER ${{ github.workspace }}/allure-report
           rm -rf ${{ github.workspace }}/allure-report/.git || true
+          
       - name: Deploy Allure report to GitHub Pages
         run: |
           cd ${{ github.workspace }}/allure-report
           git init
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b gh-pages
+          git remote add origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git
           git add .
           git commit -m "Update Allure Report"
-          git push --force https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
+          git push --force origin gh-pages
 
 
