@@ -27,8 +27,14 @@ jobs:
         run: |
           docker run --rm --user root \
             -v ${{ github.workspace }}/allure-results:/app/target/allure-results \
-            -v ${{ github.workspace }}/allure-report:/app/target/site/allure-maven-plugin \
             selenium-java-test mvn allure:report
+
+      - name: Copy Allure report from Docker container to host folder
+        run: |
+          mkdir -p allure-report
+          docker run --rm --user root \
+            -v ${{ github.workspace }}/allure-report:/tmp/allure-report \
+            selenium-java-test bash -c "cp -r /app/target/site/allure-maven-plugin/* /tmp/allure-report/"
 
       - name: Deploy Allure report to GitHub Pages
         run: |
