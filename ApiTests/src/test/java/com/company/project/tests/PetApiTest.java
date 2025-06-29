@@ -30,7 +30,6 @@ public class PetApiTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("This test validates that a new pet can be created and response contains correct name and status.")
     public void testCreatePet() {
-        System.out.println("hey from Create: " );
         Pet pet = new Pet();
         pet.setId(10);
         pet.setName("Pretty dog");
@@ -60,8 +59,6 @@ public class PetApiTest {
     @Severity(SeverityLevel.BLOCKER)
     @Description("This test verifies that a pet with ID 10 can be fetched and has correct details.")
     public void testGetPetById() {
-        System.out.println("hey from Get: " );
-
         int petId = 10;
 
         Allure.step("Send GET request to fetch pet by ID");
@@ -79,7 +76,6 @@ public class PetApiTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("This test updates a pet and validates that the response contains the updated pet details.")
     public void testUpdatePet() {
-        System.out.println("hey from Update: " );
         Pet pet = new Pet();
         pet.setId(10);
         pet.setName("dogUpdated");
@@ -115,8 +111,6 @@ public class PetApiTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("This test deletes a pet by ID and verifies it was removed.")
     public void testDeletePetById() {
-        System.out.println("hey from Delete: " );
-
         int petIdDeletion = 11;
 
         Pet pet = new Pet();
