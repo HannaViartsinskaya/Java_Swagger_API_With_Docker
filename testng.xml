@@ -1,0 +1,7 @@
+<suite name="APISuite">
+    <test name="UserTests">
+        <classes>
+            <class name="com.company.project.tests.PetApiTest"/>
+        </classes>
+    </test>
+</suite>
