@@ -20,9 +20,10 @@ jobs:
       - name: Run tests and generate Allure report inside Docker
         run: |
           docker run --rm --user root \
-            -v ${{ github.workspace }}/allure-results:/app/target/allure-results \
-            -v ${{ github.workspace }}/allure-report:/app/target/site/allure-maven-plugin \
-            selenium-java-test mvn clean test allure:report
+          -v ${{ github.workspace }}/allure-results:/app/target/allure-results \
+          -v ${{ github.workspace }}/allure-report:/app/target/site/allure-maven-plugin \
+          selenium-java-test mvn test allure:report
+
 
       - name: Debug Docker report folder (optional)
         run: |
