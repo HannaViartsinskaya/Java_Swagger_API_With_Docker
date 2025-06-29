@@ -28,7 +28,11 @@ jobs:
       - name: Debug Docker report folder (optional)
         run: |
           ls -l ${{ github.workspace }}/allure-report
-
+          
+      - name: Fix permissions and remove existing .git folder
+        run: |
+          sudo chown -R $USER:$USER ${{ github.workspace }}/allure-report
+          rm -rf ${{ github.workspace }}/allure-report/.git || true
       - name: Deploy Allure report to GitHub Pages
         run: |
           cd ${{ github.workspace }}/allure-report
