@@ -2,6 +2,7 @@ import OnboardingPages from '../pageobjects/OnboardingPages';
 import MainDashboard from '../pageobjects/MainDashboard';
 import BalancePage from '../pageobjects/BalancePage';
 import HeaderSection from '../pageobjects/HeaderSection';
+import LeftSideMenuSection from '../pageobjects/LeftSideMenuSection';
 import { setupOnboarding } from '../helpers/setupOnboarding';
 
 
@@ -18,7 +19,8 @@ describe('Monefy allows filter users expenses & incomes by different time ranges
 
     const mainDashboard = new MainDashboard();
     const headerSection=new HeaderSection();
-    const balancePage=new BalancePage();
+    const leftSideMenuSection= new LeftSideMenuSection();
+
 
     beforeEach(async () => {
         onboardingPages = new OnboardingPages();
@@ -28,8 +30,7 @@ describe('Monefy allows filter users expenses & incomes by different time ranges
     it('should be able to filter', async () => {
         await mainDashboard.expectTimeRangeTitleToBe(expectedMonth);
         await headerSection.tapLeftMenu();
-        await headerSection.selectDayTimeRangeInFilter();
+        await leftSideMenuSection.selectDayTimeRangeInFilter();
         await mainDashboard.expectTimeRangeTitleToBe(expectedDay);
-        await driver.pause(1000);
     });
 });

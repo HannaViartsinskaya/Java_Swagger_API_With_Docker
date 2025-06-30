@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//*[@resource-id='com.monefy.app.lite:id/toolbar']//android.widget.TextView[@text=\"Cash\"]"
+}

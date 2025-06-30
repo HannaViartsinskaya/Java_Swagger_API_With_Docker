@@ -1,13 +1,14 @@
 # Monefy Android Automation Suite
 
 This project contains automated tests for the Monefy Android application, implemented with Appium and TypeScript, following the Page Object Model (POM) design pattern. 
-Based on my experience, the solution will be easy mantain and scale, because:
+Based on my experience, the solution will be easy maintain and scale, because:
 - we have POM here and we can easily extend tests coverage;
 - also I added reporting for visibility of the results
 
 What still I want to improve:
-- add Dockerization to isolate depencies and add paralelisation, and also setting up CI/CD would be easier
+- add Dockerization to isolate dependencies and add parallelisation, and also setting up CI/CD would be easier
 - add running our tests in CI/CD with Github actions
+- add parametrization to tests and check different values
 
 #### Why Appium with TS
  I selected Appium because:
@@ -20,14 +21,17 @@ I decided to go with TS, because I want to demonstarte my ability to use TS, due
 `await driver.setImplicitTimeout(5000);`
  
 
+
 #### Project Overview
 The automation suite verifies core financial workflows and key UI behaviors:
 
 - Adding incomes and expenses via different flows
 - Validating balance and summary calculations
 - Filtering transactions by date ranges
+- Sending transfer from Cash to Payment card
 
-These tests check that Monefy reliably tracks user finances and shows accurate data.
+These tests check that Monefy reliably tracks user finances and shows accurate data. I found these flows more important in the application, and also for the future would extend checks that balance was updated succesfully on balance page also. And expenses & incomes are displaying correctly in Balance
+
 
 ### How to run the project
 #### Prerequisites
@@ -43,14 +47,14 @@ These tests check that Monefy reliably tracks user finances and shows accurate d
 `npx wdio run wdio.conf.ts`
 
 Or run a specific test file:
-`npx wdio run wdio.conf.ts --spec ./tests/add_expenses_incomes.spec.ts`
+` npx wdio run wdio.conf.ts --spec ./test/specs/moneyTransfer.test.ts`
 
 #### Opening Allure Report
 `allure generate ./allure-results -o ./allure-report --clean`
 and then open report
 `allure open ./allure-report`
 Note: Also I attached example of the genrated report under allure-report folder
-<img width="1502" alt="Screenshot 2025-06-29 at 00 14 52" src="https://github.com/user-attachments/assets/3dd2aa05-42ed-49be-878b-6b269069cd75" />
+<img width="1511" alt="Screenshot 2025-06-30 at 18 11 16" src="https://github.com/user-attachments/assets/cf275692-f7c6-496a-b2d7-16a4f997b7e9" />
 
 
 ### Critical Test Coverage
@@ -72,3 +76,10 @@ Covered:
 - Default time range title displays the current month
 - Changing time range filter to "Day"
 - Verifying the time range title updates to the correct weekday/date
+
+
+#### Transferring money from one account to another (moneyTransfer.test.ts)
+Covered:
+- By default selected 'All accounts' of the user
+- User can change filtering of the dashboard to 'Cash' or 'Payment card'
+- User can send money from 'Cash' to 'Payment card', and balance will be adjusted correctly in Cash dashboard & Payment card

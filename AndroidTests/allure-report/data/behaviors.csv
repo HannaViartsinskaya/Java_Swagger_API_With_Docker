@@ -1,3 +1,4 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"0","","0","Monefy allows to add expenses in various ways and incomes; all values calculated correctly on dashboard ","2","0","","0"
+"0","","0","Monefy allows user sending money from one type of account to another and balance updated successfully, user can switch between accounts ","1","0","","0"
 "0","","0","Monefy allows filter users expenses & incomes by different time ranges ","1","0","","0"
+"0","","0","Monefy allows to add expenses in various ways and incomes; all values calculated correctly on dashboard ","2","0","","0"
