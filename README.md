@@ -9,12 +9,13 @@
 
 **Findings:**  Works in general but  ⚠️ Bugs found:
 
-1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do 
+1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
 2.  Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all (low priority).
-
+<img width="394" alt="Screenshot 2025-07-01 at 07 20 09" src="https://github.com/user-attachments/assets/b2f70dcf-2a4d-4419-97ba-62ae144e276b" />
 **Priority:** High — essential app flow.
 
 **Risks:** Broken income flow blocks core app functionality.
+
 
 
 
@@ -24,7 +25,7 @@
 
 **Findings:**  Works in general but , ⚠️ Bugs found:
 
-1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do 
+1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
 2. Minor issue with operator input (low priority) the same as in charter 2.
 
 **Priority:** High — core functionality.
@@ -37,7 +38,7 @@
 
 **Objective:** Verify that dashboard shows correct percentages for added expenses for the selected period of time.
 
-**Findings:** ⚠️ Question: Currently we show percentages per expense (so we calculate as (thisExpense/allExpensesAmount)/100), I would double check it with Product team, because another option might be to show (100*thisExpense/wholeIncomeInThisPeriod). Based on my experience I would like to have better ration between incomes & expenses on this chart
+**Findings:** ⚠️ Question/Bug possible: Currently we show percentages per expense (so we calculate as (thisExpense/allExpensesAmount)/100), I would double check it with Product team, because another option might be to show (100*thisExpense/wholeIncomeInThisPeriod). Based on my experience I would like to have better ration between incomes & expenses on this chart
 
 **Priority:** High — essential app flow.
 
@@ -49,8 +50,8 @@
 
 **Objective:** Verify that dashboard shows correct income and expense selected period of time, and adjusts immediately if you added a new expense or income
 
-**Findings:** ⚠️ Bug/Improvement: Inconsistent behavior for different timeframes. If user selected the timeframe.length>=2 days and tries to add income/expense -> income/expense will be added by default (you can change this date, but still user can skip it) with current date
-BUT if you try with specific date (like 10th of June) and add income/expense -> it will be added by default to the date you stay on.
+**Findings:** ⚠️ Question/Improvement: Inconsistent behavior for different timeframes. If user selected the timeframe.length>=2 days and tries to add income/expense -> income/expense will be added by default (you can change this date, but still user can skip it) with current date
+BUT if you try with specific date (like 10th of June) and add income/expense -> it will be added by default to the date you stay on. Is this difference expected or we want to have consistent behaviour?
 
 **Priority:** High — essential app flow.
 
@@ -145,7 +146,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Objective:** Verify dashboard data filters and updates correctly.
 
-**Findings:** ⚠️ Bug found: flickering background when switching dates with negative balance.
+**Findings:** ⚠️ Bug found: flickering background when switching dates with negative balance. (low priority)
 
 **Priority:** Medium — data correct overall but user trust impact.
 
@@ -156,7 +157,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Objective:** User can export their historical transactions & balances to CSV file or DB file
 
-**Findings:**  ✅ Works smoothly. ⚠️ Bug found: There is no visual indicator in the app that download was done. Would be nice to show a toast message or snackbar about that
+**Findings:**  ✅ Works smoothly. ⚠️ Bug found: There is no visual indicator in the app that download was done. Would be nice to show a toast message or snackbar about that (medium priority)
 
 **Priority:** Medium, due to less frequent usage.
 
