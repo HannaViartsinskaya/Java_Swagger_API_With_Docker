@@ -11,9 +11,9 @@
 - Clone this repository
 
 ## How to Run Tests In GitHub
-- Go to Github actions https://github.com/HannaViartsinskaya/Java_Swagger_API_With_Docker/actions/workflows/api-tests.yml
+- Go to Github actions https://github.com/HannaViartsinskaya/Hanna-Nasi/actions/workflows/pages/pages-build-deployment
 - Run action manually
-- Report you can find published to GitHub Pages https://hannaviartsinskaya.github.io/Java_Swagger_API_With_Docker/
+- Report you can find published to GitHub Pages https://hannaviartsinskaya.github.io/Hanna-Nasi/
 
 ## How to Run Tests Locally
 
