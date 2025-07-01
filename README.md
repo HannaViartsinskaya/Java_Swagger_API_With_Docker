@@ -255,7 +255,6 @@ There is no any login functionality or 2FA, but for subscribed users passcode pr
 ### Summary of found issues
 
 1. There is no confirmation modal when user clicks on delete icon for the income or expense. Would be nice to have it and notify user what this action will do  (Medium priority)
-![IMG_1104](https://github.com/user-attachments/assets/540f9896-8fa0-4895-b245-8d6f477b4d11)
 
 2. Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all, and in general not sure do we need to have them in this input? (low priority).
 <img width="394" alt="Screenshot 2025-07-01 at 07 20 09" src="https://github.com/user-attachments/assets/762dcf6d-7db8-49a6-8565-aec4147fc5d7" />
