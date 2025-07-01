@@ -137,7 +137,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:** ✅ Works smoothly. No issues found.
 
-**Priority:** Medium — frequently used but alternative entry flow.
+**Priority:** Medium — we have alternative flow for adding expenses.
 
 **Risks:** Can affect user trust in fast expense entry.
 
@@ -194,10 +194,18 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — enhances usability.
 
 
+#### Charter 17: Right menu: Balance modes – Budget, Carry Over, and Future Recurring Modes
+
+**Objective**: Ensure the user can activate/deactivate Budget Mode, Carry Over, and Future Recurring Records modes  on the right side menu, and that the dashboard updates accordingly.
+
+**Findings**: ✅ Overall works smoothly.
+⚠️ Bug/UX Issue: After activating Budget Mode, it becomes unclear what the pie chart numbers represent. The chart appears to show income (same location, just different color), which is confusing. Suggest adding a visible label or indicator near the chart or header to clearly show that Budget Mode is active (Low).
+
+**Priority**: Low/Medium — improves usability and clarity.
 
 
 ### Mobile related tests
-#### Charter 17: Offline Functionality
+#### Charter 18: Offline Functionality
 
 **Objective:** User still can use basics without internet connection, for example add expenses, incomes, transfers, and it will be saved then accordingly
 
@@ -206,7 +214,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — enhances reliability.
 
 
-#### Charter 18: Landscape Mode
+#### Charter 19: Landscape Mode
 
 **Objective:** App can't be used in landscape mode, so no issues with it
 
@@ -215,7 +223,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Low
 
 
-#### Charter 19: App Behavior on Backgrounding & Resuming
+#### Charter 20: App Behavior on Backgrounding & Resuming
 
 **Objective:** Verify the app maintains its state when sent to background and reopened, we keep data which user provided and user can continue working on it
 
@@ -262,6 +270,8 @@ There is no any login functionality or 2FA, but for subscribed users passcode pr
 3. Flickering background in balance button when switching dates with negative balance. During switching for some miliseconds you will see green backround for balance button even if the balance is negative (low priority)
 
 4. There is no visual indicator in the app that download was done. Would be nice to show a toast message or snackbar about that (medium priority)
+
+5. After activating Budget Mode, it becomes unclear what the pie chart numbers represent. The chart appears to show income (same location, just different color), which is confusing. Suggest adding a visible label or indicator near the chart or header to clearly show that Budget Mode is active (Low).
 
 The videos can be found via link https://drive.google.com/drive/folders/1-2lFkaDmAxTL4AVN4XSoEyOZzOqn2npz?usp=sharing
 
