@@ -9,7 +9,6 @@ public class Category {
         this.id = id;
         this.name = name;
     }
-    // getters and setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getName() { return name; }

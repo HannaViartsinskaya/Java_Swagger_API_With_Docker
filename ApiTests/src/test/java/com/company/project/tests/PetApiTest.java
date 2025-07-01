@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.Collections;
+import org.testng.annotations.DataProvider;
 
 @Epic("Swagger Pet API Tests")
 @Feature("Pet API Tests")
@@ -25,19 +26,59 @@ public class PetApiTest {
         petAPI = new PetApi();
     }
 
-    @Test(description = "Verify pet creation endpoint returns correct data")
+
+    @DataProvider(name = "petDataProvider")
+    public Object[][] petDataProvider() {
+        return new Object[][] {
+                {
+                        new Pet(
+                                10,
+                                "Pretty dog",
+                                new Category(1, "Dogs"),
+                                Collections.singletonList("https://test.com/dog.jpg"),
+                                Collections.singletonList(new Tag(101, "cute")),
+                                "available"
+                        )
+                },
+                {
+                        new Pet(
+                                16,
+                                "",
+                                new Category(2, "Cats"),
+                                Collections.singletonList("https://test.com/cat.jpg"),
+                                Collections.singletonList(new Tag(102, "exotic")),
+                                "sold"
+                        )
+                },
+                {
+                        new Pet(
+                                17,
+                                "Snake with very long name, to check that pet creation still works",
+                                new Category(3, "Reptiles"),
+                                Collections.singletonList("https://tes.com/snake.jpg"),
+                                Collections.singletonList(new Tag(1030625, "longname")),
+                                "pending"
+                        )
+                },
+                {
+                        new Pet(
+                                103,
+                                "Special chars in name 🐶🐱",
+                                new Category(4, "Mixed"),
+                                Collections.singletonList("https://example.com/mix.jpg"),
+                                Collections.singletonList(new Tag(104, "emoji")),
+                                "available"
+                        )
+                }
+        };
+    }
+
+
+    @Test(dataProvider = "petDataProvider", description = "Verify pet creation with different inputs")
     @Story("Create Pet")
     @Severity(SeverityLevel.NORMAL)
     @Description("This test validates that a new pet can be created and response contains correct name and status.")
-    public void testCreatePet() {
-        Pet pet = new Pet();
-        pet.setId(10);
-        pet.setName("Pretty dog");
-        pet.setCategory(new Category(1, "Dogs"));
-        pet.setPhotoUrls(Collections.singletonList("string"));
-        pet.setTags(Collections.singletonList(new Tag(0, "testTag")));
-        pet.setStatus("available");
-
+    public void testCreatePet(Pet pet) {
         Allure.step("Send POST request to create a new pet");
         Response response = petAPI.createPet(pet);
 
