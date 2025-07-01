@@ -146,7 +146,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Objective:** Verify dashboard data filters and updates correctly.
 
-**Findings:** ⚠️ Bug found: flickering background when switching dates with negative balance. (low priority)
+**Findings:** ⚠️ Bug found: flickering background in balance button when switching dates with negative balance. (low priority)
 
 **Priority:** Medium — data correct overall but user trust impact.
 
@@ -215,7 +215,15 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Low
 
 
+#### Charter 19: App Behavior on Backgrounding & Resuming
 
+**Objective:** Verify the app maintains its state when sent to background and reopened, we keep data which user provided and user can continue working on it
+
+**Findings:**  ✅ Works good
+
+**Priority:** Medium
+
+**Risks:** Losing unsaved data or incorrect UI on resume may frustrate users.
 
 
 ### Security tests
@@ -223,7 +231,7 @@ There is no any login functionality or 2FA, but for subscribed users passcode pr
 - Passcode setup and enforcement
 - Passcode bypass attempts (brute force)
 - App's data encryption and storage security for sensitive user data
-- 
+
 
 ### Charter Prioritization
 **High:** Adding/Editing/Removing Income & Expense (Charters 2 & 3) — critical flows, user would be blocked if broken.
@@ -240,3 +248,28 @@ There is no any login functionality or 2FA, but for subscribed users passcode pr
 **Security Risks:** Even though the app lacks authentication, future implementation (e.g., passcode) should be hardened against bypass or brute force.
 
 **Offline Risks:** Since basic functionality works offline, syncing logic and data consistency must be ensured when reconnected.
+
+
+
+
+### Summary of found issues
+
+1. There is no confirmation modal when user clicks on delete icon for the income or expense. Would be nice to have it and notify user what this action will do  (Medium priority)
+![IMG_1104](https://github.com/user-attachments/assets/540f9896-8fa0-4895-b245-8d6f477b4d11)
+
+2. Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all, and in general not sure do we need to have them in this input? (low priority).
+<img width="394" alt="Screenshot 2025-07-01 at 07 20 09" src="https://github.com/user-attachments/assets/762dcf6d-7db8-49a6-8565-aec4147fc5d7" />
+
+3. Flickering background in balance button when switching dates with negative balance. During switching for some miliseconds you will see green backround for balance button even if the balance is negative (low priority)
+
+4. There is no visual indicator in the app that download was done. Would be nice to show a toast message or snackbar about that (medium priority)
+
+The videos can be found via link https://drive.google.com/drive/folders/1-2lFkaDmAxTL4AVN4XSoEyOZzOqn2npz?usp=sharing
+
+
+**Questions to be clarified before the bug ticket creation (and possible issues):**
+
+1. On th pie chart currently we show percentages per expense (so we calculate as (thisExpense/allExpensesAmount)/100), I would double check it with Product team, because another option might be to show (100*thisExpense/wholeIncomeInThisPeriod). Based on my experience I would like to have better ration between expense & incomes on this chart
+   
+2. Inconsistent behavior for different timeframes. If user selected the timeframe.length>=2 days and tries to add income/expense -> income/expense will be added by default (you can change this date, but still user can skip it) with current date. But if you try with specific date (like 10th of June) and add income/expense -> it will be added by default to the date you stay on. Is this difference expected or we want to have consistent behaviour? Video for this point also in [link](https://drive.google.com/drive/folders/1-2lFkaDmAxTL4AVN4XSoEyOZzOqn2npz?usp=sharing)
+
