@@ -10,7 +10,7 @@
 **Findings:**  Works in general but  ⚠️ Bugs found:
 
 1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
-2.  Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all (low priority).
+2.  Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all, and in general not sure do we need to have them in this input? (low priority).
 
 **Priority:** High — essential app flow.
 
@@ -26,7 +26,7 @@
 **Findings:**  Works in general but , ⚠️ Bugs found:
 
 1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
-2. Minor issue with operator input (low priority) the same as in charter 2.
+2. Minor issue with operator input (low priority) the same as in charter 1.
 
 **Priority:** High — core functionality.
 
@@ -223,13 +223,14 @@ There is no any login functionality or 2FA, but for subscribed users passcode pr
 - Passcode setup and enforcement
 - Passcode bypass attempts (brute force)
 - App's data encryption and storage security for sensitive user data
+- 
 
 ### Charter Prioritization
 **High:** Adding/Editing/Removing Income & Expense (Charters 2 & 3) — critical flows, user would be blocked if broken.
+
 **Medium:** Onboarding, Dashboard Filter, Adding Expense via Shortcut (Charters 1, 4, 5) — important but user not fully blocked.
 
 ###  Risks to Mitigate
-
 **Functional Risks:** Broken income/expense flows will block the core usage of the app. These should be covered by Unit, API, and E2E tests with highest priority.
 
 **Data Integrity Risks:** Incorrect dashboard reporting or balance calculation can lead to user confusion or loss of trust. Additional validation is needed, particularly around date filtering and real-time balance updates.
