@@ -11,7 +11,7 @@
 
 1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
 2.  Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all (low priority).
-<img width="394" alt="Screenshot 2025-07-01 at 07 20 09" src="https://github.com/user-attachments/assets/b2f70dcf-2a4d-4419-97ba-62ae144e276b" />
+
 **Priority:** High — essential app flow.
 
 **Risks:** Broken income flow blocks core app functionality.
