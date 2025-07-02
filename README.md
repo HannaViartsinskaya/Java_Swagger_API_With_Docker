@@ -17,7 +17,7 @@
 
 
 
-#### Charter 2: Adding, Editing & Removing Expense via '-' Button
+### Charter 2: Adding, Editing & Removing Expense via '-' Button
 
 **Objective:** Test expense flows using balance button.
 
@@ -30,7 +30,7 @@
 
 
 
-#### Charter 3: Dashboard shows correct percentages for expenses
+### Charter 3: Dashboard shows correct percentages for expenses
 
 **Objective:** Verify that dashboard shows correct percentages for added expenses for the selected period of time.
 
@@ -40,7 +40,7 @@
 
 
 
-#### Charter 4: Dashboard shows correct income and expense for the selected timeframe
+### Charter 4: Dashboard shows correct income and expense for the selected timeframe
 
 **Objective:** Verify that dashboard shows correct income and expense selected period of time, and adjusts immediately if you added a new expense or income
 
@@ -51,7 +51,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 5: User can transfer money from different types of accounts
+### Charter 5: User can transfer money from different types of accounts
 
 **Objective:** User can transfer money from different types of accounts (Cash -> Payment card, Payment card -> Cash and others added) and balance for both of them correctly adjusted. F.e I transfer 50$ from Cash to Payment card, THEN balance for Cash will be currentBalance-50$ AND balance for Card will be currentBalance+50$
 
@@ -61,7 +61,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 6: User can view detailed transactions list in balance page
+### Charter 6: User can view detailed transactions list in balance page
 
 **Objective:** User can view detailed transactions list (income, expenses, transfers) for the selected timerange after clicking on one of the burger button, close to balance. Transactions will be grouped by categories (f.e income -> salary), and each group can be extended, and you will see all transactions with details
 
@@ -71,7 +71,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 7: User can subscribe to paid version and new features will be available
+### Charter 7: User can subscribe to paid version and new features will be available
 
 **Objective:** User should be able to get subscription, and then he should have access fr paid features, like a new category creation, dark mode, passcode and others
 
@@ -80,7 +80,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** High. One of the main feature for our app, because it will bring money to us
 
 
-#### Charter 8: Balance calculation works properly
+### Charter 8: Balance calculation works properly
 
 **Objective:** User sees correctly calculated balance, where balance = sum of income - sum of expenses for the selected period time. If balance is negative we will show '-' and adjust the color to red, IF balance is positive then the balance's element color will be green
 
@@ -92,7 +92,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 ### Medium priority flows
 
-#### Charter 9: Onboarding Screens Flow
+### Charter 9: Onboarding Screens Flow
 
 **Objective:** Verify user can skip onboarding screens and land on dashboard.
 
@@ -102,7 +102,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 10: New account can be created
+### Charter 10: New account can be created
 
 **Objective:** In right menu user can create a new account successfully. The new account will be visible also in the left menu and user can switch and view balance and transactions from new account, also new account can be used for transfers
 
@@ -111,7 +111,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — less frequent usage for this feature. User creates new accounts maybe only til 10 times per lifecycle of the app, but adds expenses/incomes much often
 
 
-#### Charter 11: Adding Expense via Dashboard Category Shortcut
+### Charter 11: Adding Expense via Dashboard Category Shortcut
 
 **Objective:** Test adding expense directly via category icons.
 
@@ -120,7 +120,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — we have alternative flow for adding expenses. Can affect user trust in fast expense entry.
 
 
-#### Charter 12: Dashboard Time Range Filter
+### Charter 12: Dashboard Time Range Filter
 
 **Objective:** Verify dashboard data filters and updates correctly.
 
@@ -129,7 +129,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — data correct overall but user trust impact. Potential confusion or distrust in app data integrity.
 
 
-#### Charter 13: User's transactions can be exported to the file
+### Charter 13: User's transactions can be exported to the file
 
 **Objective:** User can export their historical transactions & balances to CSV file or DB file
 
@@ -139,7 +139,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 14: Sync with Dropbox, Google Drive works
+### Charter 14: Sync with Dropbox, Google Drive works
 
 **Objective:** User can sync their data with Dropbox, Google Drive successfully 
 
@@ -149,7 +149,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 15: User Data Deletion
+### Charter 15: User Data Deletion
 
 **Objective:** User's data will be deleted completedly after he will confirm this action in modal
 
@@ -161,7 +161,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 
-#### Charter 16: Transaction Search
+### Charter 16: Transaction Search
 
 **Objective:** In header user can search by category, account or note in transactions. Found transaction is clickable and can be opened and edited
 
@@ -170,7 +170,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — enhances usability.
 
 
-#### Charter 17: Right menu: Balance modes – Budget, Carry Over, and Future Recurring Modes
+### Charter 17: Right menu: Balance modes – Budget, Carry Over, and Future Recurring Modes
 
 **Objective**: Ensure the user can activate/deactivate Budget Mode, Carry Over, and Future Recurring Records modes  on the right side menu, and that the dashboard updates accordingly.
 
@@ -181,7 +181,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 
 ### Mobile related tests
-#### Charter 18: Offline Functionality
+### Charter 18: Offline Functionality
 
 **Objective:** User still can use basics without internet connection, for example add expenses, incomes, transfers, and it will be saved then accordingly
 
@@ -190,7 +190,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Medium — enhances reliability.
 
 
-#### Charter 19: Landscape Mode
+### Charter 19: Landscape Mode
 
 **Objective:** App can't be used in landscape mode, so no issues with it
 
@@ -199,7 +199,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 **Priority:** Low
 
 
-#### Charter 20: App Behavior on Backgrounding & Resuming
+### Charter 20: App Behavior on Backgrounding & Resuming
 
 **Objective:** Verify the app maintains its state when sent to background and reopened, we keep data which user provided and user can continue working on it
 
