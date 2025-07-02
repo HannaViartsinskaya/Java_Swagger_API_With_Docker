@@ -1,9 +1,9 @@
 ### Exploratory Testing by Hanna Nasi
 
 ### Functionality testing
-#### High priority flows
+### High priority flows
 
-#### Charter 1: Adding, Removing & Editing Income
+### Charter 1: Adding, Removing & Editing Income
 
 **Objective:** Test income flows from dashboard.
 
