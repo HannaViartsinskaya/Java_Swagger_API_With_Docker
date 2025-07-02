@@ -12,9 +12,7 @@
 1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
 2.  Minor issue allowing operators (+, -, /, *) typed in amount field and not clear that they were typed at all, and in general not sure do we need to have them in this input? (low priority).
 
-**Priority:** High — essential app flow.
-
-**Risks:** Broken income flow blocks core app functionality.
+**Priority:** High — essential app flow. Broken income flow blocks core app functionality.
 
 
 
@@ -28,9 +26,7 @@
 1. There is no confirmation modal when user clicks on delete icon for the income. Would be nice to have it and notify user what this action will do  (Medium priority)
 2. Minor issue with operator input (low priority) the same as in charter 1.
 
-**Priority:** High — core functionality.
-
-**Risks:** Same as income flow.
+**Priority:** High — core and essential functionality of the app.
 
 
 
@@ -40,9 +36,7 @@
 
 **Findings:** ⚠️ Question/Bug possible: Currently we show percentages per expense (so we calculate as (thisExpense/allExpensesAmount)/100), I would double check it with Product team, because another option might be to show (100*thisExpense/wholeIncomeInThisPeriod). Based on my experience I would like to have better ration between incomes & expenses on this chart
 
-**Priority:** High — essential app flow.
-
-**Risks:** Broken percentages flow blocks user from analysing their expenses, which is the core functionality.
+**Priority:** High — essential app flow. Broken percentages flow blocks user from analysing their expenses, which is the core functionality.
 
 
 
@@ -53,9 +47,7 @@
 **Findings:** ⚠️ Question/Improvement: Inconsistent behavior for different timeframes. If user selected the timeframe.length>=2 days and tries to add income/expense -> income/expense will be added by default (you can change this date, but still user can skip it) with current date
 BUT if you try with specific date (like 10th of June) and add income/expense -> it will be added by default to the date you stay on. Is this difference expected or we want to have consistent behaviour?
 
-**Priority:** High — essential app flow.
-
-**Risks:** Broken numbers of expenses/incomes in the dashboard will block users from analysing their expenses/incomes, which is the core functionality.
+**Priority:** High — essential app flow. Broken amount of expenses/incomes in the dashboard during N time range will block users from analysing their expenses/incomes, which is the core functionality.
 
 
 
@@ -65,9 +57,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:**  ✅ Works smoothly. No issues found.
 
-**Priority:** High — essential app's flow.
-
-**Risks:**  Transfer flow is one of core functionality of the app, 
+**Priority:** High — essential app's flow. Transfer flow is one of core functionality of the app, maybe not so common used as adding expenses or incomes, but still will be important
 
 
 
@@ -77,9 +67,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:**  ✅ Works smoothly. No issues found.
 
-**Priority:** High — essential app's flow.
-
-**Risks:**  Transfer flow is one of core functionality of the app.
+**Priority:** High — essential app's flow. View list of transactions is one of the core functionality of the app, regardless of that user can analyze them on pie chart, still on the transactions list user can select expenses or incomes which he wanna edit.
 
 
 
@@ -89,9 +77,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:**  Didn't check it fully just to avoid subscription
 
-**Priority:** High
-
-**Risks:** One of the main feature for our app, because it will bring money to us
+**Priority:** High. One of the main feature for our app, because it will bring money to us
 
 
 #### Charter 8: Balance calculation works properly
@@ -100,9 +86,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:**  ✅ Works smoothly. No issues found.
 
-**Priority:** High — essential app's flow.
-
-**Risks:**  Broken balance is definitely core functionality of the app.
+**Priority:** High — essential app's flow. Broken balance is definitely core functionality of the app.
 
 
 
@@ -114,9 +98,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:** ✅ Works correctly. No bugs found.
 
-**Priority:** Medium — core entry flow.
-
-**Risks:** Broken navigation could block users from accessing the app.
+**Priority:** Medium — core entry flow. Broken navigation could block users from accessing the app.
 
 
 
@@ -126,9 +108,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:**  ✅ Works smoothly. No issues found.
 
-**Priority:** Medium — less frequent usage for this feature.
-
-**Risks:**  Broken balance is definitely core functionality of the app.
+**Priority:** Medium — less frequent usage for this feature. User creates new accounts maybe only til 10 times per lifecycle of the app, but adds expenses/incomes much often
 
 
 #### Charter 11: Adding Expense via Dashboard Category Shortcut
@@ -137,9 +117,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:** ✅ Works smoothly. No issues found.
 
-**Priority:** Medium — we have alternative flow for adding expenses.
-
-**Risks:** Can affect user trust in fast expense entry.
+**Priority:** Medium — we have alternative flow for adding expenses. Can affect user trust in fast expense entry.
 
 
 #### Charter 12: Dashboard Time Range Filter
@@ -148,9 +126,7 @@ BUT if you try with specific date (like 10th of June) and add income/expense -> 
 
 **Findings:** ⚠️ Bug found: flickering background in balance button when switching dates with negative balance. (low priority)
 
-**Priority:** Medium — data correct overall but user trust impact.
-
-**Risks:** Potential confusion or distrust in app data integrity.
+**Priority:** Medium — data correct overall but user trust impact. Potential confusion or distrust in app data integrity.
 
 
 #### Charter 13: User's transactions can be exported to the file
@@ -241,10 +217,6 @@ There is no any login functionality or 2FA, but for subscribed users passcode pr
 - App's data encryption and storage security for sensitive user data
 
 
-### Charter Prioritization
-**High:** Adding/Editing/Removing Income & Expense (Charters 2 & 3) — critical flows, user would be blocked if broken.
-
-**Medium:** Onboarding, Dashboard Filter, Adding Expense via Shortcut (Charters 1, 4, 5) — important but user not fully blocked.
 
 ###  Risks to Mitigate
 **Functional Risks:** Broken income/expense flows will block the core usage of the app. These should be covered by Unit, API, and E2E tests with highest priority.
