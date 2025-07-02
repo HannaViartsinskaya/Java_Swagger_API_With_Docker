@@ -1,4 +1,5 @@
 ### Exploratory Testing by Hanna Nasi
+Test device: iOS 18.5 - iPhone 15
 
 ### Functionality testing
 ### High priority flows
