@@ -30,7 +30,7 @@ The automation suite verifies core financial workflows and key UI behaviors:
 - Filtering transactions by date ranges
 - Sending transfer from Cash to Payment card
 
-These tests check that Monefy reliably tracks user finances and shows accurate data. I found these flows more important in the application, and also for the future would extend checks that balance was updated succesfully on balance page also. And expenses & incomes are displaying correctly in Balance
+Selected tests check that Monefy reliably tracks user finances and shows accurate data. I found these flows more important in the application, due to the main purpose of the app to help user analyze and track his incomes and expenses.  For the future I would extend checks that balance was updated succesfully on balance page also, and expenses & incomes are displaying correctly in Balance
 
 
 ### How to run the project
