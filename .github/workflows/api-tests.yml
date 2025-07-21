@@ -25,6 +25,7 @@ jobs:
           selenium-java-test mvn test allure:report
 
       - name: Debug Docker report folder (optional)
+        if: always()
         run: |
           ls -l ${{ github.workspace }}/ApiTests/allure-report
           
