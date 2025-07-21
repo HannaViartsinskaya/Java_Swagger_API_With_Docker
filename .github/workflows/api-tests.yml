@@ -22,7 +22,11 @@ jobs:
           docker run --rm --user root \
           -v ${{ github.workspace }}/ApiTests/allure-results:/app/target/allure-results \
           -v ${{ github.workspace }}/ApiTests/allure-report:/app/target/site/allure-maven-plugin \
-          selenium-java-test bash -c "mvn test || true && mvn allure:report"
+          selenium-java-test bash -c '
+            mvn test || TEST_EXIT_CODE=$?;
+            mvn allure:report || echo "Failed to generate Allure report";
+            exit ${TEST_EXIT_CODE:-0}
+            '
 
       - name: Debug Docker report folder (optional)
         if: always()
