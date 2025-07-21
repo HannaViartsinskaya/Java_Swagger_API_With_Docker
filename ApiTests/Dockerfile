@@ -7,7 +7,7 @@ COPY pom.xml .
 RUN mvn dependency:go-offline
 
 COPY . .
-RUN mvn clean verify
+RUN mvn clean package -DskipTests
 
 FROM maven:3.9.6-eclipse-temurin-11
 WORKDIR /app
@@ -18,4 +18,4 @@ USER tester
 
 COPY --from=build /app /app
 
-CMD ["mvn", "clean", "test"]
+CMD ["mvn", "test"]
