@@ -29,11 +29,13 @@ jobs:
           ls -l ${{ github.workspace }}/ApiTests/allure-report
           
       - name: Fix permissions and remove existing .git folder
+        if: always()
         run: |
           sudo chown -R $USER:$USER ${{ github.workspace }}/ApiTests/allure-report
           rm -rf ${{ github.workspace }}/ApiTests/allure-report/.git || true
           
       - name: Deploy Allure report to GitHub Pages
+        if: always()
         run: |
           cd ${{ github.workspace }}/ApiTests/allure-report
           git init
